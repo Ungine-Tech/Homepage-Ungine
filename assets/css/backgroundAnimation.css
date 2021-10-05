@@ -66,7 +66,7 @@ html {
         left: calc(-1 * var(--bg-ani-dis));
     }
     60% {
-        left: 0vw;
+        left: 0;
     }
     100% {
         left: calc(-1 * var(--bg-ani-dis));
@@ -94,7 +94,7 @@ html {
         left: calc(-1 / 6 * var(--bg-ani-dis));
     }
     10% {
-        left: 0vw;
+        left: 0;
     }
     50% {
         left: calc(-1 * var(--bg-ani-dis));

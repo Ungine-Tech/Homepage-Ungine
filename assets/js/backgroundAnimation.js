@@ -1,5 +1,5 @@
 window.onload = function () {
-	const imgs = [ "0.jpg", "1.jpg", "2.jpg" ]
+	const imageList = [ "0.jpg", "1.jpg", "2.jpg" ]
 	const imgPath = "assets/img/background/"
 	let count = 0;
 	const bgObj1 = document.getElementById( "bgObj1" )
@@ -15,9 +15,9 @@ window.onload = function () {
 	function ChangeImg ( obj ) {
 		console.log( "ChangeImg: " + obj );
 		count++;
-		count %= imgs.length;
+		count %= imageList.length;
 		console.log( "ChangeImg - count: " + count )
-		obj.setAttribute( 'src', imgPath + imgs[ count ] );
+		obj.setAttribute( 'src', imgPath + imageList[ count ] );
 	}
 	
 	function Main () {
