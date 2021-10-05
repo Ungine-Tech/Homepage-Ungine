@@ -24,7 +24,7 @@ jobs:
       - name: Upload COS
         uses: jaehue/tencent-cos-action@v0.1.0
         with:
-          args: delete -r -f * && upload -rs ./ /
+          args: delete -r -f / && upload -rs assets/ assets/ && upload index.html /
           secret_id: ${{ secrets.TENCENT_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
           bucket: ungine-official-1307412436
