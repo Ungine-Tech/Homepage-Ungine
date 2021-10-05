@@ -39,7 +39,7 @@ jobs:
           # COS bucket region
           cos_region: ap-shanghai
           # Local path to be uploaded to COS. Directory or file is allowed
-          local_path: /
+          local_path: .
           # COS path to put the local files in on COS
           remote_path: /
           # Set to true for cleaning files on COS path which are not existed in local path. Default is false

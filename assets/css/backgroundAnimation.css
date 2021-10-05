@@ -52,7 +52,7 @@ html {
     left: calc(-1 / 6 * var(--bg-ani-dis));
 
     animation: MoveB var(--bg-ani-time) infinite linear,
-    AppearenceB var(--bg-ani-time) 1;
+    Appearence-B var(--bg-ani-time) 1;
 
     -webkit-animation: MoveB var(--bg-ani-time) infinite linear,
     AppearenceB var(--bg-ani-time) 1;
@@ -104,7 +104,7 @@ html {
     }
 }
 
-@keyframes AppearenceB {
+@keyframes Appearence-B {
     0% {
         opacity: 0;
     }
