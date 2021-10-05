@@ -20,15 +20,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Tencent Cloud COS Action
-        # uses: TencentCloud/cos-action@5ee3807d5ff6fddadbbb1d3e658c0690863de8ec
-        uses: TencentCloud/cos-action@v1
+
+      - name: Upload COS
+        uses: jaehue/tencent-cos-action@v0.1.0
         with:
+          args: delete -r -f / && upload -rs ./ /
           secret_id: ${{ secrets.TENCENT_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
-          cos_bucket: ungine-official-1307412436
-          cos_region: ap-shanghai
-          local_path: .
-          remote_path: .
-          clean: true
+          bucket: ${{ secrets.TENCENT_COS_BUCKET }}
+          region: ap-shanghai
