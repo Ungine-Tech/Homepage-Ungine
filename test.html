@@ -4,71 +4,80 @@
 	<title>test</title>
 
 	<style type="text/css">
-		:root{
-			--bg-ani-dis: 30vw;
-			--bg-ani-time: 30s;
-		}
-		div{
-			width: calc(100vw + var(--bg-ani-dis));
-			height: 100%;
-			margin: 0;
-			position: absolute;
+        :root {
+            --bg-ani-dis: 30vw;
+            --bg-ani-time: 30s;
+        }
 
-		}
-		#d1{
-			background-image: linear-gradient(to right, #ff7777, #ddff77, #77ffaa);
-			animation: BgAniA var(--bg-ani-time) infinite;
-			-webkit-animation: BgAniA var(--bg-ani-time) infinite;
-			z-index: 10;
-		}
-		#d2{
-			background-image: linear-gradient(to right, #444499, #449944, #aa7744);
-			animation: BgAniB var(--bg-ani-time) infinite;
-			-webkit-animation: BgAniB var(--bg-ani-time) infinite;
-		}
+        div {
+            width: calc(100vw + var(--bg-ani-dis));
+            height: 100%;
+            margin: 0;
+            position: absolute;
+
+        }
+
+        #d1 {
+            background-image: linear-gradient(to right, #ff7777, #ddff77, #77ffaa);
+            animation: BgAniA var(--bg-ani-time) infinite;
+            -webkit-animation: BgAniA var(--bg-ani-time) infinite;
+            z-index: 10;
+        }
+
+        #d2 {
+            background-image: linear-gradient(to right, #444499, #449944, #aa7744);
+            animation: BgAniB var(--bg-ani-time) infinite;
+            -webkit-animation: BgAniB var(--bg-ani-time) infinite;
+        }
 
 
-		@keyframes BgAniA{
-			0%{
-				left: calc(-1 * var(--bg-ani-dis));
-				opacity: 0;
-			}
-			10%{
-				opacity: 1;
-			}
+        @keyframes BgAniA {
+            0% {
+                left: calc(-1 * var(--bg-ani-dis));
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
 
-			50%{
-				opacity: 1;
-			}
-			60%{
-				opacity: 0;
-				left: 0vw;
-			}
+            50% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+                left: 0vw;
+            }
 
-			100%{opacity: 0;}
-		}
+            100% {
+                opacity: 0;
+            }
+        }
 
-		@keyframes BgAniB{
-			0%{
-				left: calc(-1 / 6 * var(--bg-ani-dis));
-			}
-			10%{
-				left: 0vw;
-			}
+        @keyframes BgAniB {
+            0% {
+                left: calc(-1 / 6 * var(--bg-ani-dis));
+            }
+            10% {
+                left: 0vw;
+            }
 
-			50%{
-				left: calc(-1 * var(--bg-ani-dis))
-			}
+            50% {
+                left: calc(-1 * var(--bg-ani-dis))
+            }
 
-			100%{
-				left: calc(-1 / 6 * var(--bg-ani-dis))
-			}
-		}
+            100% {
+                left: calc(-1 / 6 * var(--bg-ani-dis))
+            }
+        }
 
 	</style>
 </head>
 <body>
-	<div id="d1">abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde</div>
-	<div id="d2">1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</div>
+<div id="d1">
+	abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde
+</div>
+<div id="d2">
+	1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+</div>
 </body>
 </html>
