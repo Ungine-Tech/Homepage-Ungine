@@ -27,5 +27,5 @@ jobs:
           args: delete -r -f / && upload -rs ./ /
           secret_id: ${{ secrets.TENCENT_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
-          bucket: ${{ secrets.TENCENT_COS_BUCKET }}
+          bucket: ungine-official-1307412436
           region: ap-shanghai
