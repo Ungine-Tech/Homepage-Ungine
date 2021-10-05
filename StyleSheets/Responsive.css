@@ -1,0 +1,56 @@
+h1::after{
+	font-size: 0;
+}
+
+@media screen and (max-width: 599px) {
+	h1::after{
+		content: "0~599px";
+	}
+    html{
+    	font-size: 18px;
+    }
+    #Head{
+    	font-size: 1.8rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) and (max-width: 767px){
+	h1::after{
+		content: "600~767px";
+	}
+    html{
+    	font-size: 18px;
+    }
+    #Head{
+    	font-size: 1.8rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+	h1::after{
+		content: "768~991px";
+	}
+    html{
+    	font-size: 12px;
+    }
+    #Head{
+    	font-size: 3.3rem;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	h1::after{
+		content: "992~1199px";
+	}
+    html{
+    	font-size: 12px;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px){
+
+}
