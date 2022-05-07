@@ -1,6 +1,7 @@
-import React, { createRef, useEffect, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import "./animation.css";
+import { wait } from "@testing-library/user-event/dist/utils";
 
 const animationTime = 20;
 const images = ["/static/img/0.jpg", "/static/img/1.jpg", "/static/img/2.jpg"];
@@ -8,25 +9,23 @@ const images = ["/static/img/0.jpg", "/static/img/1.jpg", "/static/img/2.jpg"];
 const Background: React.FC = () => {
     const [now, setNow] = useState(0);
 
-    const imgNow = createRef<HTMLImageElement>();
-    const imgNext = createRef<HTMLImageElement>();
+    const imgNow = useRef<HTMLImageElement>();
+    const imgNext = useRef<HTMLImageElement>();
 
     useEffect(() => {
         if (
             typeof imgNow.current !== "undefined" &&
-            imgNow.current !== null &&
-            typeof imgNext.current !== "undefined" &&
-            imgNext.current !== null
+            typeof imgNext.current !== "undefined"
         ) {
             imgNow.current.src = images[now];
             imgNext.current.src = images[now + 1 < images.length ? now + 1 : 0];
         }
     }, [imgNow, imgNext]);
 
-    setInterval(() => {
+    /* setInterval(() => {
         setNow(now + 1 < images.length ? now + 1 : 0);
         console.log("[Background]", "Image has been set to", now);
-    }, (animationTime * 2000) / 3);
+    }, (animationTime * 2000) / 3); */
 
     return (
         <Box
@@ -61,7 +60,7 @@ const Background: React.FC = () => {
                     opacity: 0,
                     animation:
                         "Move var(--bg-ani-time) infinite linear, Opacity var(--bg-ani-time) infinite ease-in",
-                    "-webkit-animation":
+                    WebkitAnimation:
                         "Move var(--bg-ani-time) infinite linear, Opacity var(--bg-ani-time) infinite ease-in",
                 }}
             />
@@ -81,7 +80,7 @@ const Background: React.FC = () => {
                     backgroundSize: "100% auto",
                     animation:
                         "MoveB var(--bg-ani-time) infinite linear, Appearence-B var(--bg-ani-time) 1",
-                    "-webkit-animation":
+                    WebkitAnimation:
                         "MoveB var(--bg-ani-time) infinite linear, AppearenceB var(--bg-ani-time) 1",
                 }}
             />
