@@ -25,6 +25,8 @@ jobs:
       
       - name: Build react scripts
         run: yarn install && yarn build
+        env:
+          CI: false
 
       - name: Upload COS
         uses: jaehue/tencent-cos-action@v0.1.0
