@@ -1,15 +1,27 @@
-import React           from 'react';
-import ReactDOM        from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import App             from './app'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import App from "./app";
+import "normalize.css/normalize.css";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/styles";
+
+const theme = createTheme({
+    typography: {
+        fontFamily: '"Roboto", "Noto Sans SC", sans-serif',
+    },
+});
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById("root") as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.Suspense>
+        <ThemeProvider theme={theme}>
+            <App />
+        </ThemeProvider>
+    </React.Suspense>
 );
 
 // If you want to start measuring performance in your app, pass a function
