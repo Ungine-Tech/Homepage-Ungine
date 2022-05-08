@@ -1,8 +1,6 @@
 import React from "react";
 import { createStyles, makeStyles } from "@mui/styles";
 import { Container, CssBaseline, Theme } from "@mui/material";
-import "@fontsource/roboto";
-import "@fontsource/noto-sans-sc";
 import Title from "./components/Title";
 import Footer from "./components/Footer";
 
