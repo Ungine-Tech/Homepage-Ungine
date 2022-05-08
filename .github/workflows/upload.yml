@@ -33,4 +33,4 @@ jobs:
           secret_id: ${{ secrets.TENCENT_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
           bucket: ungine-official-1307412436
-          region: accelerate # 全球加速
+          region: ap-shanghai
