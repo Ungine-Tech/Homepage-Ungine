@@ -25,6 +25,7 @@ jobs:
         run: yarn install && yarn build
         env:
           CI: false
+          GENERATE_SOURCEMAP: false
 
       - name: Upload COS
         uses: jaehue/tencent-cos-action@v0.1.0
