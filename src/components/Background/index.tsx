@@ -1,7 +1,6 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import "./animation.css";
-import { wait } from "@testing-library/user-event/dist/utils";
 
 const animationTime = 20;
 const images = ["/static/img/0.jpg", "/static/img/1.jpg", "/static/img/2.jpg"];
