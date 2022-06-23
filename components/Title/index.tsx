@@ -3,7 +3,7 @@ import { Box, Theme, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 const Title: React.FC = () => {
     const theme = useTheme<Theme>();
-    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
         <Box
@@ -35,6 +35,7 @@ const Title: React.FC = () => {
                         [theme.breakpoints.down("sm")]: {
                             fontSize: "2.4rem",
                         },
+                        mb: 1,
                     }}
                 >
                     {"Ungine"}
