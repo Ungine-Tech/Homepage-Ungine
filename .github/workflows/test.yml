@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  upload:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - name: Test react scripts
+      - name: Test next.js app
         run: yarn install --frozen-lockfile && yarn build
         env:
           CI: false
