@@ -31,8 +31,7 @@ RUN yarn export
 FROM nginx:stable-alpine AS runner
 WORKDIR /usr/local/nginx
 
-COPY --from=builder .next/server/pages /usr/share/nginx/html
-COPY --from=builder .next/static /usr/share/nginx/html/_next/static
+COPY --from=builder out /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
