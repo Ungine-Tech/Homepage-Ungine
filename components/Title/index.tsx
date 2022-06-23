@@ -1,6 +1,5 @@
 import React from "react";
-import { useTheme } from "@mui/styles";
-import { Box, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, Theme, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 const Title: React.FC = () => {
     const theme = useTheme<Theme>();
