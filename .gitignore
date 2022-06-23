@@ -1,4 +1,7 @@
+### Next.js
+/out/
 /build/
+/.next/
 
 ### VisualStudioCode template
 .vscode/*
@@ -201,4 +204,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-

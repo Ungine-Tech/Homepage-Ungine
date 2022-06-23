@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Link, Theme, Typography } from "@mui/material";
-import { useTheme } from "@mui/styles";
+import { Box, Link, Theme, Typography, useTheme } from "@mui/material";
 
 const Footer: React.FC = () => {
     const theme = useTheme<Theme>();

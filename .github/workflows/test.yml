@@ -20,10 +20,10 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: 14.x
+          node-version: 16.x
           cache: yarn
 
       - name: Test react scripts
-        run: yarn install && yarn build
+        run: yarn install --frozen-lockfile && yarn build
         env:
           CI: false
