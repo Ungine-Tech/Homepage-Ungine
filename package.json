@@ -31,12 +31,6 @@
     "dev": "next dev",
     "export": "next build && next export"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
