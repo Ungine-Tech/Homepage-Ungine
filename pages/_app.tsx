@@ -1,16 +1,17 @@
 import type { AppProps } from "next/app";
+import type { NextPage } from "next";
 import React from "react";
+import "~/styles/global.scss";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import Head from "next/head";
-import Logo from "~/public/logo.png";
-import Logo192 from "~/public/logo192.png";
-import SocialImage from "~/public/socialImage.jpg";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import createEmotionCache from "~/theme/createEmotionCache";
 import theme from "~/theme";
-import "~/styles/animation.css";
+
 import config from "~/config.json";
-import { NextPage } from "next";
+import Logo from "~/public/logo.png";
+import Logo192 from "~/public/logo192.png";
+import SocialImage from "~/public/socialImage.jpg";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
