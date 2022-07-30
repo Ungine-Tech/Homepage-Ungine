@@ -1,4 +1,3 @@
-import { Box, Container } from "@mui/material";
 import React from "react";
 import Title from "~/components/Title";
 import Footer from "~/components/Footer";
@@ -6,34 +5,17 @@ import Background from "~/components/Background";
 import { NextPage } from "next";
 
 const Home: NextPage = () => (
-    <Container
-        fixed
-        maxWidth={"lg"}
-        sx={{
-            height: "100vh",
-            maxHeight: "-webkit-fill-available",
-            width: "100vw",
-            paddingY: "5%",
-            display: "flex",
-            flexDirection: "column",
-        }}
-        className={"container"}
+    <div
+        className={
+            "container max-w-screen-lg px-6 sm:px-12 py-8 mx-auto h-screen w-screen flex flex-col"
+        }
     >
-        <Box
-            component={"main"}
-            sx={{
-                zIndex: 1000,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                flexGrow: 1,
-            }}
-        >
+        <main className={"z-auto flex flex-col justify-center flex-grow"}>
             <Title />
-        </Box>
+        </main>
         <Footer />
         <Background />
-    </Container>
+    </div>
 );
 
 export default Home;

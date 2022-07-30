@@ -2,33 +2,18 @@ import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import React from "react";
 import "~/styles/global.scss";
-import { CacheProvider, EmotionCache } from "@emotion/react";
 import Head from "next/head";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import createEmotionCache from "~/theme/createEmotionCache";
-import theme from "~/theme";
 
 import config from "~/config.json";
 import Logo from "~/public/logo.png";
 import Logo192 from "~/public/logo192.png";
 import SocialImage from "~/public/socialImage.jpg";
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache();
-
-const MyApp: NextPage<
-    AppProps & {
-        emotionCache?: EmotionCache;
-    }
-> = (props) => {
-    const {
-        Component,
-        emotionCache = clientSideEmotionCache,
-        pageProps,
-    } = props;
+const MyApp: NextPage<AppProps> = (props) => {
+    const { Component, pageProps } = props;
 
     return (
-        <CacheProvider value={emotionCache}>
+        <>
             <Head>
                 <meta
                     name="viewport"
@@ -56,12 +41,8 @@ const MyApp: NextPage<
             <noscript>
                 {"You need to enable JavaScript to run this app."}
             </noscript>
-            <ThemeProvider theme={theme}>
-                {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-                <CssBaseline />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </CacheProvider>
+            <Component {...pageProps} />
+        </>
     );
 };
 

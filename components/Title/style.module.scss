@@ -1,0 +1,23 @@
+.root {
+  @apply z-auto w-4/5 font-normal;
+
+  * {
+    color: #F0F0F0;
+  }
+
+  .title {
+    @apply text-6xl tracking-wide mb-6;
+
+    :nth-child(1) {
+      @apply font-normal tracking-normal block md:inline-block text-4xl sm:text-6xl mb-2;
+    }
+
+    :nth-child(2) {
+      @apply font-normal block md:inline-block text-4xl sm:text-6xl md:ml-4;
+    }
+  }
+
+  .companyName {
+    @apply font-light text-sm md:text-3xl;
+  }
+}
