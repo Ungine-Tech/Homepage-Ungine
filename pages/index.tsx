@@ -7,7 +7,7 @@ import { NextPage } from "next";
 const Home: NextPage = () => (
     <div
         className={
-            "container max-w-screen-lg px-6 sm:px-12 py-8 mx-auto h-screen w-screen flex flex-col"
+            "container max-w-screen-xl px-6 sm:px-12 py-8 mx-auto h-screen w-screen flex flex-col"
         }
     >
         <main className={"z-auto flex flex-col justify-center flex-grow"}>
