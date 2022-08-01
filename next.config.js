@@ -5,9 +5,7 @@ const nextConfig = {
     swcMinify: true,
     reactStrictMode: true,
     compress: true,
-    experimental: {
-        outputStandalone: process.env.NEXT_MODE === "docker",
-    },
+    output: "standalone",
 };
 
 module.exports = nextConfig;

@@ -1,67 +1,36 @@
 import React from "react";
-import { Box, Link, Theme, Typography, useTheme } from "@mui/material";
+import classes from "./style.module.scss";
+import dayjs from "dayjs";
 
 const Footer: React.FC = () => {
-    const theme = useTheme<Theme>();
+    const copyrightYear = ((start: number) => {
+        if (dayjs().year() > start) {
+            return `${start} - ${dayjs().year()}`;
+        }
+
+        return start.toString();
+    })(2021);
 
     return (
-        <Box
-            component={"footer"}
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"flex-start"}
-            flexWrap={"nowrap"}
-            sx={{
-                "& *": {
-                    marginTop: theme.spacing(1),
-                    marginBottom: theme.spacing(1),
-                },
-            }}
-        >
-            <Typography
-                variant={"body2"}
-                component={"span"}
-                color={"#999"}
-                fontSize={".6rem"}
-                marginRight={4}
-                whiteSpace={"nowrap"}
-                overflow={"hidden"}
-                textOverflow={"ellipsis"}
-                maxWidth={"100%"}
-            >
-                {"Copyright © 2021 "}
-                <Link
-                    href="/"
-                    rel="self"
-                    color={"inherit"}
-                    underline={"hover"}
-                    target={"_self"}
-                >
+        <footer className={classes.root}>
+            <p className={classes.copyright}>
+                {`Copyright © ${copyrightYear} `}
+                <a href="/" rel="self" color={"inherit"} target={"_self"}>
                     {"Hainan Ungine Times Technology Co.,Ltd."}
-                </Link>
+                </a>
                 {" All Right Reserved."}
-            </Typography>
-            <Typography
-                variant={"body2"}
-                component={"span"}
-                color={"#999"}
-                fontSize={".6rem"}
-                whiteSpace={"nowrap"}
-                overflow={"hidden"}
-                textOverflow={"ellipsis"}
-                maxWidth={"100%"}
-            >
-                <Link
+            </p>
+            <p className={classes.beian}>
+                <a
                     href="//beian.miit.gov.cn"
                     rel="noreferrer"
                     color={"inherit"}
-                    underline={"hover"}
                     target={"_blank"}
                 >
                     {"琼ICP备2021006880号-2"}
-                </Link>
-            </Typography>
-        </Box>
+                </a>
+            </p>
+        </footer>
     );
 };
 

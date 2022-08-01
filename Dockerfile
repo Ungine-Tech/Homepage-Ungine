@@ -13,7 +13,6 @@ RUN yarn install --frozen-lockfile
 FROM node:lts-alpine AS builder
 
 ENV NODE_ENV production
-ENV NEXT_MODE docker
 
 COPY --from=deps node_modules node_modules
 COPY . .

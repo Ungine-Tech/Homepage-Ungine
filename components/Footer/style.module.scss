@@ -1,0 +1,20 @@
+.root {
+  @apply flex flex-col sm:flex-row items-start flex-nowrap mb-4;
+  color: #999999;
+
+  .copyright {
+    @apply text-xs mr-8 whitespace-nowrap overflow-hidden overflow-ellipsis max-w-full mb-1 pr-4;
+
+    a {
+      @apply no-underline hover:underline;
+    }
+  }
+
+  .beian {
+    @apply text-xs whitespace-nowrap overflow-hidden overflow-ellipsis max-w-full;
+
+    a {
+      @apply no-underline hover:underline m-0;
+    }
+  }
+}

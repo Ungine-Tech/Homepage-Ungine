@@ -1,0 +1,93 @@
+.root {
+  filter: brightness(30%);
+
+  @apply absolute w-full h-full overflow-hidden -z-10;
+  @apply top-0 left-0;
+
+  :global {
+    --bg-ani-dis: 150px;
+    --bg-ani-time: 20s;
+  }
+
+  @mixin bgImageStyle {
+    width: calc(100vw + var(--bg-ani-dis));
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    max-width: unset;
+  }
+
+  :nth-child(1) {
+    @include bgImageStyle;
+
+    opacity: 0;
+    left: calc(-1 * var(--bg-ani-dis));
+    z-index: -20;
+    animation: Move var(--bg-ani-time) infinite linear,Opacity var(--bg-ani-time) infinite ease-in;
+
+    @keyframes Move {
+      0% {
+        left: calc(-1 * var(--bg-ani-dis));
+      }
+      60% {
+        left: 0;
+      }
+      100% {
+        left: calc(-1 * var(--bg-ani-dis));
+      }
+    }
+
+    @keyframes Opacity {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 0;
+      }
+    }
+  }
+
+  :nth-child(2) {
+    @include bgImageStyle;
+
+    left: calc(-1/6 * var(--bg-ani-dis));
+    z-index: -25;
+    animation: MoveB var(--bg-ani-time) infinite linear,Appearence-B var(--bg-ani-time) 1;
+
+    @keyframes MoveB {
+      0% {
+        left: calc(-1 / 6 * var(--bg-ani-dis));
+      }
+      10% {
+        left: 0;
+      }
+      50% {
+        left: calc(-1 * var(--bg-ani-dis));
+      }
+      100% {
+        left: calc(-1 / 6 * var(--bg-ani-dis));
+      }
+    }
+
+    @keyframes Appearence-B {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+    }
+  }
+}
